@@ -1,8 +1,0 @@
-a. ¿Cómo es el comportamiento de las diferentes ejecuciones?.
-
-A veces se imprime primero "En el main", otras "En la pila".
-
-b. ¿Se podría forzar las ejecuciones para que se comporte de una manera
-determinada? Realice las modificaciones pertinentes.
-
-Imprimo "En el main", luego inicio el otro hilo.

@@ -1,3 +1,0 @@
-a. Si lo ejecuto  varias veces, ¿qué sucede?
-
-Los contadores se ejecutan en distintos ordenes. A veces termina uno primero, a veces el otro.
