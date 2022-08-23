@@ -9,7 +9,10 @@ public class TesteoRecurso {
         Cliente ines=new Cliente ();
         ines.setName ("Ines Garcia");
         
+        ines.start();  
         juan.start();
-        ines.start();
+ 
+
+        Recurso.uso();
     }
 }
