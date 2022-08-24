@@ -7,5 +7,4 @@ class TesteoHilos{
         miHilo.start();
         System.out.println("En el main");
     }
-    
 }
