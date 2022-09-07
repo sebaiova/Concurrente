@@ -1,0 +1,6 @@
+Aunque el orco y el curandero usaran su habilidad con 3 de poder siempre, la ejecucion da:
+    -> 16 hp restante.
+    -> 10 hp restante.
+    -> 13 hp restante.
+    -> 10 hp restante.
+
