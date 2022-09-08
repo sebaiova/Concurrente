@@ -3,16 +3,25 @@ package tp03.ex04;
 public class Actividad {
     
     private final String nombre;
+    private boolean libre = true;
 
     public Actividad(String nombre)
     {
         this.nombre = nombre;
     }
 
-    public synchronized void usar(Hamster hamster) throws InterruptedException 
+    public synchronized boolean estaLibre()
     {
-        System.out.printf("Hamster \"%d\" ha empezado a utilizar %s.\n", hamster.getNumero(), this.nombre);
-        Thread.sleep(500);
-        System.out.printf("Hamster \"%d\" ha dejado de utilizar %s.\n", hamster.getNumero(), this.nombre);
+        return libre;
+    }
+
+    public synchronized void setLibre(boolean libre)  
+    {
+        this.libre = libre;
+    }
+
+    public String getNombre()
+    {
+        return nombre;
     }
 }
