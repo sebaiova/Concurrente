@@ -19,6 +19,7 @@ public class Hamster extends Thread {
     {
         int tareasRealizadas = 0;
         Random random = new Random();
+        // Cada hamsters debe realizar cualquier tarea 3 veces.
         while(tareasRealizadas < 3)
         {
             int tarea = random.nextInt(3);
