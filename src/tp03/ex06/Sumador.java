@@ -23,9 +23,6 @@ public class Sumador extends Thread {
         for(int i=begin; i<end; i++)
             sumaParcial += array[i];
 
-        synchronized(resultadoFinal) 
-        {
-            resultadoFinal.setValor(resultadoFinal.getValor()+sumaParcial);
-        }
+        resultadoFinal.sumar(sumaParcial);
     }
 }

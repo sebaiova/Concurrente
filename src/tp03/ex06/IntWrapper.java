@@ -9,12 +9,12 @@ class IntWrapper
         this.valor = valor;
     }
 
-    public void setValor(int valor)
+    public synchronized void sumar(int x)
     {
-        this.valor = valor;
+        this.valor += x; 
     }
 
-    public int getValor()
+    public synchronized int getValor()
     {
         return this.valor;
     }
