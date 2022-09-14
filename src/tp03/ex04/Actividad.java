@@ -3,21 +3,21 @@ package tp03.ex04;
 public class Actividad {
     
     private final String nombre;
-    private boolean libre = true;
+    private boolean ocupada = false;
 
     public Actividad(String nombre)
     {
         this.nombre = nombre;
     }
 
-    public synchronized boolean estaLibre()
+    public synchronized boolean usar()
     {
-        return libre;
+        return ocupada==false ? (ocupada = true) : false;
     }
 
-    public synchronized void setLibre(boolean libre)  
+    public synchronized void dejarDeUsar()  
     {
-        this.libre = libre;
+        ocupada = false;
     }
 
     public String getNombre()

@@ -4,7 +4,7 @@ public class Jaula {
 
     private Actividad[] actividades;
 
-    public Jaula() throws InterruptedException 
+    public Jaula()  
     {
         actividades = new Actividad[3];
         actividades[0] = new Actividad("Caja de Comida");
@@ -12,19 +12,14 @@ public class Jaula {
         actividades[2] = new Actividad("Hamaca");
     }
 
-    public void usar(int actividad) 
+    public boolean usar(int actividad) 
     {
-        actividades[actividad].setLibre(false);
+        return actividades[actividad].usar();
     }
 
     public void dejarDeUsar(int actividad)
     {
-        actividades[actividad].setLibre(true);
-    }
-
-    public boolean estaLibre(int actividad)
-    {
-        return actividades[actividad].estaLibre();
+        actividades[actividad].dejarDeUsar();
     }
 
     public String getNombreActividad(int actividad)
