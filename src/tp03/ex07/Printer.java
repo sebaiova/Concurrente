@@ -21,7 +21,7 @@ public class Printer extends Thread {
         {
             while(!control.esTurno(turno))
             {
-               // Thread.yield();
+                Thread.yield();
             }
 
             for(int j=0; j<repeat; j++)

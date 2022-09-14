@@ -11,12 +11,12 @@ public class Control {
         this.turno = 0;
     }
 
-    public boolean esTurno(int i)
+    public synchronized boolean esTurno(int i)
     {
         return turno == i;
-    } 
+    }
 
-    public  void siguienteTurno()
+    public synchronized void siguienteTurno()
     {
         turno++;
         if(turno >= cantidadTurnos)

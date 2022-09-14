@@ -18,5 +18,7 @@ public class Main {
 
         for(int i=0; i<PRINTERS_AMOUNT; i++)
             printers[i].join();
+
+        System.out.println();
     }
 }
