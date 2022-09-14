@@ -9,24 +9,16 @@ public class Surtidor {
         this.carga = carga;
     }
 
-    public synchronized boolean cargar(Vehiculo vehiculo)
+    public synchronized boolean tieneCarga()
     {
-        boolean success = true;
-        int combustible = vehiculo.getCombustible();
-        int faltante = vehiculo.getCapacidadTanque() - combustible;
-        if(carga < faltante)
-        {
-            faltante = carga;
-            success = false;
-        }
+        return carga > 0;
+    }
 
-        vehiculo.setCombustible(combustible+faltante);
-        try { Thread.sleep(10);} catch (InterruptedException e) {}
-
-        carga -= faltante;
-
-        System.out.printf("Cargando %d lts. a vehiculo \"%s\". Combustible restante: %d.\n", faltante, vehiculo.getPatente(), carga);
-
-        return success;
+    public synchronized int sustraer(int lts, String patente)
+    {
+        int combustible = Math.min(lts, this.carga);
+        this.carga -= combustible;
+        System.out.printf("%s cargó %d lts. Al surtidor le quedan %d lts.\n", patente, combustible, carga);
+        return combustible;
     }
 }
