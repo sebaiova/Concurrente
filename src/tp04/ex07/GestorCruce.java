@@ -32,7 +32,6 @@ public class GestorCruce {
 
     public void llegarNorte()
     {
-        semA.();;
     }
 
     

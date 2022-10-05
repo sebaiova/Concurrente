@@ -20,5 +20,4 @@ public class Impresora extends Thread {
             System.out.printf("KKAKKKANNNK... (Tipo: %d)\n", tipo);
         }
     }
-
 }
