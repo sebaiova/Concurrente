@@ -12,7 +12,8 @@ public class Cocinero extends Thread {
     @Override
     public void run()
     {
-        while(true) {
+        while(true) 
+        {
             confiteria.prepararComida();
             System.out.println("Cocinero preparó una comida.");
         }
