@@ -12,7 +12,9 @@ public class Gato extends Thread {
     @Override
     public void run()
     {
-        
+        veterinaria.entraGato();
+        try {sleep(500);} catch (InterruptedException e) {e.printStackTrace();}
+        veterinaria.saleGato();
     }
 
 }
