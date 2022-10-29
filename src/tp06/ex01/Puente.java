@@ -9,10 +9,10 @@ public class Puente {
     private final int CAPACIDAD;
     private final int MAX_CONSECUTIVOS;
 
-    private int consecutivosSur;    /**************************/
-    private int consecutivosNorte;  /* solo para implementar */
-    private int enEsperaSur;        /* ceder el paso        */
-    private int enEsperaNorte;      /***********************/
+    private int consecutivosSur;       /*************************/
+    private int consecutivosNorte;    /* solo para implementar */
+    private int enEsperaSur;         /* ceder el paso         */
+    private int enEsperaNorte;      /*************************/
 
     private final Queue<Integer> filaSur = new LinkedList<>();
     private final Queue<Integer> filaNorte = new LinkedList<>();
