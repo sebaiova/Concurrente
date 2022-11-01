@@ -2,16 +2,19 @@ package tp05.ex04;
 
 public class ControlTren extends Thread {
     
-    private Tren tren;
+    private final TrenTuristico tren;
+    private int viajes;
 
-    public ControlTren(Tren tren)
+    public ControlTren(int viajes, TrenTuristico tren)
     {
+        this.viajes = viajes;
         this.tren = tren;
     }
 
     @Override
     public void run()
     {
-
+        while(viajes-->0)
+            tren.viajar();
     }
 }

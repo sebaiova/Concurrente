@@ -2,10 +2,14 @@ package tp05.ex04;
 
 public class Pasajero extends Thread {
     
-    private Tren tren;
+    private static int ID = 0;
 
-    public Pasajero(Tren tren)
+    private final int id; 
+    private TrenTuristico tren;
+
+    public Pasajero(TrenTuristico tren)
     {
+        this.id = ID++;
         this.tren = tren;
     }
 
@@ -13,6 +17,8 @@ public class Pasajero extends Thread {
     @Override
     public void run()
     {
-
+        tren.comprarTicket(id);
+        tren.subir(id);
+        tren.bajar(id);
     }
 }
