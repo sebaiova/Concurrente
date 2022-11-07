@@ -17,6 +17,7 @@ public class Embotellador extends Thread {
     {
         while(true)
         {
+            try {sleep(100);} catch (InterruptedException e) {}
             if(random.nextBoolean())
                 fabrica.embotellarVino();
             else
