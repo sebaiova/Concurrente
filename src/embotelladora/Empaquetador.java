@@ -12,8 +12,10 @@ public class Empaquetador extends Thread {
     @Override
     public void run()
     {
-        while(true)
+        while(true) {
             fabrica.empaquetar();
+            fabrica.guardarEnAlmacen();
+        }
     }
 
 }

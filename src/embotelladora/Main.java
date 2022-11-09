@@ -9,7 +9,9 @@ public class Main {
         Fabrica fabrica = new Fabrica();
 
         Empaquetador empaquetador = new Empaquetador(fabrica);
+        Camion camion = new Camion(fabrica);
         empaquetador.start();
+        camion.start();
 
         Embotellador[] embotellador = new Embotellador[EMBOTELLADORES];
         for(int i=0; i<EMBOTELLADORES; i++)
