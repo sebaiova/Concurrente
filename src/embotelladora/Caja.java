@@ -11,7 +11,6 @@ public class Caja {
     private int stock = 0;
     
     private final Lock lock = new ReentrantLock(true); 
-    private final Condition cajaLlena = lock.newCondition();
     private final Condition cajaVacia = lock.newCondition(); 
 
     public Caja(String tipo, String colorA, String colorB)
@@ -24,8 +23,6 @@ public class Caja {
     public void empaquetar() throws InterruptedException
     {
         lock.lock();
-        while(!esLlena())
-            cajaLlena.await();
         stock = 0;
         System.out.printf("%sEmpaquetada caja de %s. [%d/%d]\n", colorB, tipo, stock, capacidad);
         lock.unlock();
