@@ -7,9 +7,10 @@ public class Main {
     static public void main(String[] args)
     {
         Fabrica fabrica = new Fabrica();
-
-        Empaquetador empaquetador = new Empaquetador(fabrica);
-        Camion camion = new Camion(fabrica);
+        Almacen almacen = new Almacen();
+        
+        Empaquetador empaquetador = new Empaquetador(fabrica, almacen);
+        Camion camion = new Camion(almacen);
         empaquetador.start();
         camion.start();
 

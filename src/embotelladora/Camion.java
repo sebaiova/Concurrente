@@ -2,11 +2,11 @@ package embotelladora;
 
 public class Camion extends Thread {
     
-    private Fabrica fabrica;
+    private Almacen almacen;
 
-    public Camion(Fabrica fabrica)
+    public Camion(Almacen almacen)
     {
-        this.fabrica = fabrica;
+        this.almacen = almacen;
     }
 
     @Override 
@@ -14,7 +14,7 @@ public class Camion extends Thread {
     {
         while(true)
         {
-            fabrica.transportar();
+            almacen.transportar();
             try {sleep(5000);} catch (InterruptedException e) {}
         }
     }
