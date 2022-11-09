@@ -19,9 +19,9 @@ public class Embotellador extends Thread {
         {
             try {sleep(100);} catch (InterruptedException e) {}
             if(random.nextBoolean())
-                fabrica.embotellarVino();
+                try { fabrica.embotellarVino();} catch (InterruptedException e) {}
             else
-                fabrica.embotellarAgua();
+                try { fabrica.embotellarAgua();} catch (InterruptedException e) {}
         }
     }
 

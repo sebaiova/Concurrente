@@ -16,7 +16,7 @@ public class Empaquetador extends Thread {
     {
         while(true) 
         {
-            fabrica.empaquetar();
+            try { fabrica.empaquetar();} catch (InterruptedException e) {}
             almacen.guardarEnAlmacen();
         }
     }
